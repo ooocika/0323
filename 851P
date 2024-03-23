@@ -1,0 +1,761 @@
+data class Person(var name: String, var age: Int)
+
+fun main(){
+  val bob = Person("Bob", 31)
+  val people = listOf("Person("Adam", 20), bob, bob)
+val people2 = listOf(Person("Adam", 20), Person("Bob", 31), bob)  
+println(people ==people2)
+                      bob.age = 32
+                      println(people ==people2)
+                      }
+                      //
+                      fun main(){
+                        val numbers = mutableListOf(1,2,3,4)
+                      numbers.add(5)
+  numbers.removeAt(1)
+  numbers[0] =0
+                        numbers.shuffle()
+  println(numbers)
+                      
+                      }
+
+                      //
+                      fun main(){
+                      val numbers = setOf(1,2,3,4)  
+                      
+                      println("Number of element: ${numbers.size}")
+if(numbers.contains(1))println("1 is in the set")
+
+
+                      val numbersBackwards = setOf(4,3,2,1)
+                      println("The sets are equals: ${numbers == numbersBackwards}
+                              ")
+                      }
+                      //
+                      fun main(){
+                        val numbersMap = mapOf("key1"to 1, "key2" to 2, "key3" to 3, "key4" to 1)
+           println("All keys: ${numbersMap.keys}")
+                      println("All values: ${numbersMap.values}")
+                      if("key2" in numbersMap) println("Value by key \"key2\": ${numbersMap["key2"]}")
+                      if(1 in numbersMap.values) println("The value 1 is the map")
+                      if(numbersMap.containsValue(1))println("The value 1 is in the map")
+                      
+                      }
+                      //
+                      fun main(){
+    val numbersMap = mapOf("key1"to 1, "key2" to 2, "key3" to 3, "key4" to 1)
+    val numbersMap = mapOf("key2"to 2, "key1" to 1, "key4" to 1, "key3" to 3)
+
+    println("The maps are equal: ${numbersMap == anotherMap}")
+                      }
+                      //
+                      fun main(){
+                        val numbersMap = mutableMapOf("one"to 1, "two"to 2)
+                      numbersMap.put("three", 3)
+                     numbersMap["one"] = 11
+                        println(numbersMap
+                               )
+                      }
+                      //
+                      fun main(){
+                        val deque = ArrayDeque(listOf(1,2,3))
+                      
+                      deque.addFirst(0)
+                      deque.addList(4)
+                      println(deque)
+
+                      println(deque.first)
+                      println(deque.last())
+
+                      deque.removeFirst()
+                      deque.removeLast()
+                      println(deque)
+                      }
+                      //
+                      val numbersSet  = setOf("one","two","three","four")
+                      val emptySet = mutableSetOf<String>()
+
+                      val numbersMap = mapOf("key1" to 1, "key2" to 2, "key3" to 3, "key4" to 1)
+
+                      val numbersMap = mutableMapOf<String, String>().apply{this["one"]= " 1"; this["two"] = "2"}
+                      //
+
+                      val map = buildMap {
+                        put("a", 1)
+                        put("b", 0)
+                        put("c", 4)
+
+                        
+                      }
+                      println(map)
+                      //
+                      val empty = emptyList<String>()
+                      //
+                      fun main(){
+                        val doubled = List(3, {it*2})
+                      println(doubled)
+                      }
+                      //
+                      val linkedList = LinkedList<String>(listOf("one","two","three"))
+                      val presizedSet = HashSet<Int>(32)
+                      //
+                      class Person(var name: String)
+                      fun main(){
+
+                        val alice = Person("Alive")
+                        val sourceList = mutableListOf(alice, Person("Bob"))
+                        val copyList = sourceList.toList()
+                        sourceLsit.add(Person("Charles"))
+                      alice.name = "Alicia"
+                        println("First item's name is: ${sourceList[0].name} in source and ${copyList[0].name} in copy")
+                      
+                      println("List size is: ${sourceList.size}in source and ${copyList.size} in copy")
+                      }
+                      //
+                      fun main(){
+                        val sourceList = mutableListOf(1,2,3)
+                        val copySet = sourceList.toMutableSet()
+                        copySet.add(3)
+                        copySet.add(4)
+                      println(copySet)
+                      }
+                      //
+                      
+                        fun main(){
+                          val sourceList = mutableListOf(1,2,3)
+                          val referenceList: List<Int> = sourceList
+sourceList.add(4)
+println(referenceList)
+             
+                        }
+
+                        //
+
+                        fun main(){
+                           val numbers=listOf("one","two","three","four")
+                        val longerThan3 = numbers.filter{it.length > 3}
+                        println(longerThan3)
+                        }
+                        //
+                        fun main(){
+                        val numbers = setOf(1,2,3)
+                        println(numbers.map{it*3})
+                        println(numbers.mapIndexed{idx, value -> value * idx})
+                        }
+
+                        fun main(){
+                          val numbers=listOf("one","two","three","four")
+                          println(numbers.associateWith{it.length})
+                        }
+                        //
+                        fun main(){
+                          val numbers=listOf("one","two","three","four")
+                          val numberIterator = numbers.iterator()
+                          while(numbersIterator.hasNext()){
+                            println(numbersIterator.next())
+                          }
+                        }
+                        //
+                        fun main(){
+                          val numbers=listOf("one","two","three","four")
+                          for(item in numbers){
+                            println(item)
+                          }
+                        }
+                        //
+                        fun main(){
+                          val numbers=listOf("one","two","three","four")
+                          numbers.forEach{
+                            println(it)
+                          }
+                        }
+                        //
+                        fun main(){
+                          val numbers=listOf("one","two","three","four")
+                          val listIterator = numbers.listIterator()
+                          while(listIterator.hasNext())listIterator.next()
+                          println("Iterating backwards:")
+                          while(listIterator.hasPervious()){
+                            print("Index: ${listIterator.previousIndex()}")
+                          println(", value: ${listIterator.previous()}")
+                          }
+
+                        }
+                        //
+                        fun main(){
+                          val numbers=listOf("one","two","three","four")
+                          val mutableIterator = numbers.iterator()
+
+                          mutableIterator.next()
+                          mutableIterator.remove()
+                          println("After removal: $numbers")
+                        }
+                        //
+                        fun main(){
+                          
+                        val numbers = mutableListOf("one","two","three","four")
+                        val mutableListIterator = numbers.listIterator()
+
+
+                        mutableListIterator.next()
+                        mutableListIterator.add("two")
+                        mutableListIterator.next()
+                        mutableListIterator.set("three")
+                        println(numbers)
+                        }
+                        //
+                        
+                        fun main(){
+                          println(4 in 1..4)
+
+                          println(4 in 1..<4)
+                        
+                        }
+                        //
+                        fun main(){
+                          for(i in 1..4)print(i)
+                        }
+                        //
+                        fun main(){
+                          for(i in 4 downTo 1)print(i)
+                        }
+                        //
+                        fun main(){
+                          for(i in 0..8 step 2)print(i)
+                          println()
+                          for(i in 0..8<step 2)print(i)
+                          println()
+                          for(i in 8 downTo 0 step2)print(i)
+                        }
+                        //
+                        fun main(){
+                          for(i in 1..10)print(i)
+                          
+                        }
+                        fun main(){
+                          for(i in 1..8 step 2)print(i)
+                        }
+                        //
+                        fun main(){
+                          println((1..10).filter{it%2 ==0})
+                        }
+                        //
+                        val numbersSequence = sequenceOf("four","three","two","one")
+
+                        val numbers = listOf("one", "two","three"," four")
+                        val numbersSequence = numbers.asSequence()
+                        //
+                        fun main(){
+                          val oddNumbers =generateSequence(1){it+2}
+                          println(oddNumbers.take(5).toList())
+                        }
+                        //
+                        fun main(){
+                          val oddNumbersLessThan10 = generateSequence(1){if(it < 8) it+2. else null}
+                          println(oddNumbersLessThan10.count())
+                        }
+                        //
+                        fun main(){
+                          val oddNumbers = sequence{
+                            yield(1)
+                            yieldAll(listOf(3,5)
+                                    yieldAll(generateSequence(7){it+2})
+                          }
+                          println(oddNumbers.take(5).toList())
+                        }
+                        //
+                        fun main(){
+                          val words="The quick brown fox jumps over the lazy dog".split(" ")
+                          val lengthList =words.filter{println("filter: $it"); it.length> 3}
+  .map{println("length: ${it.length}"); it.length} 
+                        .take(4)
+
+                        println("Length of first 4 words longer than 3 chars: ")
+                        
+                        println(lengthList)
+                        }
+                        //
+                        fun main(){
+                           val words="The quick brown fox jumps over the lazy dog".split(" ")
+val wordsSequence = words.asSequence()
+
+val lengthsSequence =wordsSequence.filter{println("filter: $it"); it.length > 3}
+.map {println("length: $ {it.length}"); it.length}
+.take(4)
+
+println(lengthsSequence.toList())
+                        }
+                        //
+                        fun main(){
+                          val number = listOf("one ", "two"," three","four")
+                          numbers.filter{it.length> 3}
+                          println("numbers are still $numbers")
+                        
+                        val longerThan3 = numbers.filter{it.length> 3}
+                        println("number longher than 3 chars are $longerThan3")
+                        }
+                        //
+                        fun main(){
+                          val number = listOf("one ", "two"," three","four")
+                          val filterResults = mutableListOf<String>()
+                          numbers.filterTo(filterResult){it.length> 3}
+                          numbers.filterIndexedTo(filterResults){index, _ -> index ==0}
+                          println(filterResults)
+                        }
+                        //
+                        fun main(){
+                           val number = listOf("one ", "two"," three","four")
+val result = numbers.mapTo(HashSet()){it.length}
+println("distinst item lengths are $result")
+
+                        }
+                        //
+                        fun main(){
+                           val number = listOf("one ", "two"," three","four")
+                           val sortedNumbers = numbers.sorted()
+                           println(numbers ==sortedNumbers)
+                           numbers.sort
+                          println(numbers == sortedNumbers)
+                        }
+                        //
+                        fun main(){
+                          val numbers = setOf(1,2,3)
+                          println(numbers.map{{it*3}})
+                        println(numberIndexed{idx, value -> value * idx})
+                        
+                        }
+                        //
+                                     fun main(){
+                                       val numbers = setOf(1,2,3)
+    println(numbers.mapNotNull{if(it == 2)null else it*3})
+    
+        println(numberIndexedNotNull{idx, value -> if(idx ==0)null else value * idx})
+        
+
+                                     }
+                                     //
+                                     fun main(){
+                                     val numbersMap = mapOf("key1" to 1, "key2" to 2,
+                                                           "key3" to 3, "key11" to 11)
+                                     println(numbersMap.mapKeys{it.key.uppercase()})
+                                     println(numbersMap.mapValues{it.value + itkey.length})
+                                     }
+                                     //
+  fun main(){
+    val colors =listOf("red","brown","grey")
+    val animals = listOf("fox", "bear","wolf")
+
+    println(colors zip animals)
+
+    val twoAnimals = listOf("fox", "bear")
+    println(colors.zip(twoAnimals))
+  }                              
+  //
+  fun main(){
+    val colors =listOf("red","brown","grey")
+    val animals = listOf("fox", "bear","wolf")
+
+    println(colors.zip(animals){color, animal -> "The ${animal.replaceFirstChar{it.uppercase()}} is $color"})
+  }
+  //
+  fun main(){
+    val numberPairs =listOf("one" to 1, " two"to 2, " three"to 3, " four " to 4
+                           )
+    println(numberPairs.unzip())
+  }
+  //
+  fun main(){
+    
+   val number = listOf("one ", "two"," three","four")
+
+  println(numbers.associateWith{it.length})
+  }
+  //
+  fun main(){
+     val number = listOf("one ", "two"," three","four")
+     println(numbers.associateBy{it.first().uppercaseChar()})
+    println(numbers.associateBy(keySelector = {it.first().uppercaseChar()}, valueTransform = {it.length}))
+  }
+  //
+  fun main(){
+    data class FullName(val firstName: String, val lastName: String)
+
+    fun parseFullName(fullName: String): FullName{
+      val nameParts = fullName.split(" ")
+      if(nameParts.size == 2){
+        return FullName(naemParts[0], nameParts[1])
+      }else throw Exception("Wrong name format")
+    }
+  }
+  val names = listOf("Alice Adams", " Brian Brown","Clara Cambell")
+  println(names.assciate{name -> parseFullName(name).let{it.lastName to it.firstName}})
+                                     }
+                                     //
+   fun main(){
+   val numbersSets =listOf(setOf(1,2,3), setOf(4,5,6).setOf(1,2))  
+   println(numberSets.flatten())
+   }                            
+   //
+   data class StringContainer(val values: List<String>)
+
+   fun main(){
+     val containers =listOf(
+     StringContainer(listOf("one","two","three")),
+       StringContainer(listOf("four","five","six"))
+     StringContainer(listOf("seven","eight"))
+     )
+     println(containers.flatMap{it.values})
+   }
+   //
+   fun main(){
+      val number = listOf("one ", "two"," three","four")
+
+      println(numbers)
+      println(numbers.joinToString())
+
+      val listString = StringBuffer("The list of numbers: ")
+      numbers.joinTo(listString)
+      println(listString)
+   }
+   //
+   fun main(){
+      val number = listOf("one ", "two"," three","four")
+      println(numbers.joinToString(separator = " | ", prefix = "start: ", postfix = ":end"))
+   }
+   //
+   fun main(){
+     val numbers = (1..100).toList()
+     println(numbers.joinToString(limit = 10, truncated = "<...>"))
+   }
+   //
+   fun main(){
+      val number = listOf("one ", "two"," three","four")
+      println(numbers.joinToString{"Element: ${it.uppercase()}"})
+   }
+   //
+   fun main(){
+      val number = listOf("one ", "two"," three","four")
+      val longerThan3 = numbers.filter{it.length>3}
+      println(longerThan3)
+
+      val numbersMap =mapOf("key1"to 1, "key2" to 2, "key3" to 3,"key11" to 11)
+      val filteredMap = numberMap.filter{(key, value) -> key.endsWith("1")&& value > 10}
+   println(fitleredMap)
+   }
+   //
+   fun main(){
+      val number = listOf("one ", "two"," three","four")
+
+      val filteredIdx = numbers.filterIndexed{index, s -> (index != 0) && (s.length < 5)}
+      val filteredNot = numbers.filterNot{it.length < = 3}
+
+      println(filteredIdx)
+      println(filteredNot)
+   }
+   //
+   fun main(){
+     val numbers = listOf(null , 1, "two", 3.0, " four")
+     println("All String elements in upper case: ")
+     numbers.fitlerIsInstance<String>().forEach{
+       println(it.uppercase())
+     }
+   }
+   //
+   fun main(){
+    val numbers = listOf(null ,"one","two", null)
+    numbers.filterNotNull().forEach{
+      println(it.length)
+    }
+   
+   }
+   //
+   fun main(){
+      val number = listOf("one ", "two"," three","four")
+      val (match,rest) = numbers.partition{it.length> 3}
+   
+   println(match)
+   println(rest)
+   }
+   //
+   fun main(){
+      val number = listOf("one ", "two"," three","four")
+
+      println(numbers.any{it.endsWith("e")})
+    println(numbers.none{it.endsWith("a")})
+   println(numbers.all{it.endsWith("e")})
+
+   println(emptyList<Int>().all{it > 5]})
+   }
+   //
+   fun main(){
+      val number = listOf("one ", "two"," three","four")
+      val empty = emptyList<String>()
+
+      println(numbers.any())
+       println(empty.any())
+    
+     println(numbers.none())
+      println(empty.none())
+   }
+   //
+
+   fun main(){
+      val number = listOf("one ", "two"," three","four")
+
+      val plusList = numbers + "five"
+     val minusList = numbers - listOf("three","four")
+
+   println(plusList)
+   println(minusList)
+   }
+   //
+   fun main(){
+      val number = listOf("one ", "two"," three","four")
+
+      println(numbers.groupBy{it.first().uppercase()})
+      println(numbers.groupBy(keySelector = {it.first()}, valueTransform = {it.uppercase()}))
+   }
+   //
+   fun main(){
+      val number = listOf("one ", "two"," three","four")
+      println(numbers.slice(1..3))
+      println(numbers.slice(0..4 step 2))
+      println(numbers.slice(setOf(3,5,0)))
+   
+   }
+   //
+   fun main(){ val number = listOf("one ", "two"," three","four","five","six")
+   println(numbers.take(3))
+   println(numbers.takeLast(3))
+   println(numbers.drop(1))
+   println(numbers.dropLast(5))
+   }
+   //
+   fun main(){ val number = listOf("one ", "two"," three","four","five","six")
+   println(numbers.takeWhile{!it.startsWith('f')})
+println(numbers.takeLastWhile{it != "three"})
+println(numbers.dropWhile{it.length == 3})
+println(numbers.dropLastWhile{it.contains('i')})
+   }
+   //
+   
+   fun main(){
+   val numbers = (0..13).toList()
+   println(numbers.chunked(3))
+   }
+   //
+    fun main(){
+      val numbers = (0..13).toList()
+      println(numbers.chunked(3){it.sum()})
+      }
+    //
+    fun main(){
+      val numbers = listOf("one","two","three","four","five")
+    println(numbers.windowed(3))
+    
+    }
+    //
+    fun main(){
+    val numbers = (1.10).toList()
+    println(numbers.windowed(3,step = 2, partialWindows = true))
+    println(numbers.windowed(3){it.sum()})
+    }
+    //
+    fun main(){
+      val numbers = listOf("one","two","three","four","five")
+      println(numbers.elementAt(3))
+    
+    val numbersSortedSet = sortedSetOf("one","two","three","four")
+    println(numbersSortedSet.elementAt(0))
+    }
+    //
+    fun main(){
+       val numbers = listOf("one","two","three","four","five")
+       println(numbers.first())
+    println(numbers.last())
+    }
+    //
+    fun main(){
+     val numbers = listOf("one","two","three","four","five")
+     println(numbers.elementAtOrNull(5))
+     println(numbers.elementAtOrElse(5){index -> The value for index $index is undefined})
+    }
+    //
+    fun main(){
+       val numbers = listOf("one","two","three","four","five")
+       println(numbers.first{it.length > 3})
+       println(numbers.last{it.startsWith("f")})
+    }
+    //
+    fun main(){
+       val numbers = listOf("one","two","three","four","five", "six")
+       println(numbers.firstOrNull{it.length> 6})
+    }
+    //
+    fun main(){
+    val numbers = listOf(1,2,3,4)
+    println(numbers.find{it%2 ==0})
+    println(numbers.findlast{it % 2==0})
+    
+    }
+    //
+    fun main(){
+      val list = listOf<Any>(0, "true", false)
+      val longEnough = list.firstNotNullOf{item -> item.toString().takeIf{it.length >= 4}}
+    println(longEnough)
+    }
+    //
+    fun main(){
+      val numbers = listOf(1,2,3,4)
+      println(numbers.random())
+    }
+    //
+    fun main(){
+
+         val numbers = listOf("one","two","three","four","five","six")
+    println("zero" in numbers)
+
+    println(numbers.containsAll(listOf("four", "two")))
+    println(numbers.containsAll(listOf("one", "zero")))
+    }
+
+    //
+    fun main(){
+
+         val numbers = listOf("one","two","three","four","five","six")
+    println(numbers.isEmpty())
+    println(numbers.isNotEmpty())
+
+val empty = emptyList<String>()
+println(empty.isEmpty())
+println(empty.isNotEmpty())
+    }
+    //
+    class Version(val major: Int, val minor: Int): Comparable<Version>{
+      override fun compareTo(other:Version): Int = when{
+        this.major != other.major -> this.major compareTo other.major
+        this.minor != other.minor -> this.minor compareTo other.minor
+        else -> 0
+      }
+    }
+    fun main(){
+      println(Version(1,2) > Version(1,3))
+      println(Version(2,0) > Version(1,5))
+    }
+    //
+    fun main(){
+      val lengthComparator =Comparator {str1: String, str2: String -> str1.lengtth - str2.length}
+      println(listOf("aaa","bb","c").sortedWith(lengthComparator))
+    }
+    //
+    fun main(){
+    println(listOf("aaa","bb","c").sortedWith(compareBy){it.length})  
+    }
+    //
+    fun main(){
+
+           val numbers = listOf("one","two","three","four")
+
+    println("Sorted ascending: ${numbers.sorted()}")
+    println("Sorted descending: ${numbers.sortedDescending()}")
+    }//
+
+    fun main(){
+
+      val numbers = listOf("one","two","three","four")
+
+      val sortedNumbers = numbers.sortedBy{it.length}
+      println("Sorted by length ascending: $sortedNumbers")
+      val sortedbyLast = number.sortedByDescending{it.last()}
+      println("Sorted by the last letter descending: $sortedByLast")
+    }
+    //
+    fun main(){
+      val numbers = listOf("one","two","three","four")
+      println("Sorted by length ascending : ${numbers.sortedWith(compareBy{it.length})}")
+    }
+    //
+    fun main(){
+      val numbers = listOf("one","two","three","four")
+      println(numbers.reversed())
+    }
+    //
+    fun main(){
+      val numbers = listOf("one","two","three","four")
+      var reversedNumbers = numbers.asReversed()
+      println(reversedNumbers)
+    }
+    //
+    fun main(){
+      val numbers = mutableListOf("one","two","three","four")
+    val reversedNumbers = numbers.asReversed()
+    println(reversedNumbers)
+    numbers.add("five")
+    println(reversedNumbers)
+    }
+    //
+    fun main(){
+      val numbers = listOf("one","two","three","four")
+      println(numbers.shuffled())
+    }
+    //
+    fun main( ){
+      val numbers = listOf(6,42,10,4)
+      println("Count: $ {numbers.count()}")
+      println("Max: ${numbers.maxOrNull()}")
+      println("Min: ${numbers.minOrNull()}")
+       println(Average: ${numbers.average()}) 
+    println("Sum: ${numbers.sum()}")
+    }
+    //
+    fun main(){
+      val numbers = listOf(5,42, 10, 4)
+      val min3Remainder = numbers.minByOrNull{it% 3}
+      println(min3Remainder)
+
+      val strings = listOf("one","two","three","four")
+    val longestString = strings.maxWithOrNull(compareBy{it.length})
+    println(longestString)
+    }
+    //
+    fun main(){
+      val numbers = listOf(5,42,10,4)
+      println(numbers.sumOf{it*2})
+    println(numbers.sumOf{it.toDouble() /2})
+    }
+    //
+    fun main(){
+      val numbers = listOf(5,42,10,4)
+
+      val simpleSum = numbers.reduce{sum, element -> sum + element}
+      println(simpleSum)
+      val sumDoubled = numbers.fold(0){sum , element -> sum+element*2
+      }
+      println(sumDoubled)
+    }
+    //
+    fun main(){
+      val numbers = listOf(5,42,10,4)
+      val sumDoubleRight = numbers.foldRight(0){element, sum-> sum+element*2}
+      println(sumDoubledRight)
+    }
+    //
+    fun main(){
+      val numbers = listOf(5,42,10,4)
+      val sumEven = numbers.foldIndexed(0){idx, sum , element -> if(idx % 2 ==0 )sum + element else sum}
+      println(sumEven)
+
+      val sumEvenRight = numbers.foldRightIndexed(0){idx,element, sum ->(idx % 2 ==0)sum+element else sum}
+      println(sumEvenRight)
+    }
+    //
+    fun main(){
+      val numbers = listOf(1,2,3,4,5)
+      val runningReduceSum = numbers.runningReduce{sum.item -> sum+ item}
+      val runningFoldSum = numbers.runningFold{sum.item -> sum+ item}
+
+      val transform = {index : Int,element : Int -> "N = ${index + 1}: $element"}
+      println(runningReduceSum.mapIndexed(transform).joinToString(("\n", "Sum of first N elements with runningReduce:\n"))
+      println(runningFoldSum.mapIndexed(transform).joinToString("\n", "Sum of first N elements with runningFold:\n"))
+
+      /851P
